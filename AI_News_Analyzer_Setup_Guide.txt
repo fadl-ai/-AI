@@ -1,0 +1,70 @@
+AI News Analyzer - Setup Guide
+
+Welcome! This guide will help you set up and use the AI News Analyzer application. Follow the steps carefully to get everything working smoothly.
+
+----------------------------
+Prerequisites
+----------------------------
+Before you start, make sure you have:
+- Python 3.8 or higher installed
+- pip (Python package manager)
+- A modern web browser like Chrome, Firefox, Safari, or Edge
+
+----------------------------
+Step 1: Clone the Repository
+----------------------------
+1. Create a new folder anywhere on your computer
+2. Copy all the project files into this folder
+
+----------------------------
+Step 6: Using the Application
+----------------------------
+1. When you run the app, it will open in your browser
+2. You can:
+   - Enter a news article URL to analyze
+   - Paste article text directly
+   - View analysis results and confidence scores
+   - See detailed explanations of the analysis
+
+----------------------------
+Troubleshooting
+----------------------------
+If you run into problems, check these tips:
+
+1. Backend Connection Issues
+   - Make sure the Flask server is running (you’ll see output in the terminal)
+   - Use the correct backend URL in the frontend code
+   - Check your browser's developer console (F12) for errors
+
+2. Model Loading Issues
+   - Make sure your model files are in the 'models' folder
+   - Check the 'logs' folder for any error messages
+   - Ensure you have enough disk space for the model files
+
+3. Dependency Issues
+   - Confirm all required packages are installed
+   - Try updating pip:
+     python -m pip install --upgrade pip
+   - If a package fails, try installing it individually
+
+----------------------------
+Project Structure
+----------------------------
+Here's what the files and folders do:
+
+- app.py         : Main backend server
+- index.html     : The main HTML file for the frontend
+- script.js      : JavaScript code that runs in the browser
+- style.css      : CSS styling for the webpage
+- models/        : Folder containing the AI model files
+- logs/          : Where the application logs are saved
+- requirements.txt : List of Python dependencies
+
+----------------------------
+Security Notes
+----------------------------
+- The app includes important security features like CORS and rate limiting
+- All API endpoints are protected against common vulnerabilities
+- User input is sanitized before it’s analyzed to prevent attacks
+
+That's it! You're now ready to set up and explore your AI News Analyzer.
