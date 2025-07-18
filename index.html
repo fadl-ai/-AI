@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> Fake News Detector</h1>
+            <p class="description">Analyze news articles and detect potential misinformation using advanced AI technology</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <form id="newsForm">
+                    <div class="input-wrapper">
+                        <textarea id="newsText" placeholder="Paste your news article here... (minimum 50 words for better accuracy)"></textarea>
+                        <div class="word-count">Words: <span id="wordCount">0</span></div>
+                    </div>
+                    <button type="submit" id="analyzeBtn" class="analyze-btn">
+                        <i class="fas fa-search"></i> Analyze News
+                    </button>
+                </form>
+            </section>
+
+            <section id="resultSection" class="result-section hidden">
+                <div class="result-header">
+                    <h2>Analysis Result</h2>
+                    <div class="confidence-meter">
+                        <div class="meter-label">Fake News Risk Score
+                            <span class="score-tooltip" title="This score estimates how likely the AI believes this article is fake news, based on both machine learning and credibility analysis. A higher score means a higher risk of being fake.">
+                                <i class="fas fa-question-circle"></i>
+                            </span>
+                        </div>
+                        <div class="meter-bar">
+                            <div id="confidenceBar" class="meter-fill"></div>
+                        </div>
+                        <div id="confidenceValue" class="meter-value">0%</div> 
+                        <div class="score-description">
+                            Higher means the article is more likely to be fake news.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="detail-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Analysis</h3>
+                        <p id="aiAnalysis">-</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Credibility Score</h3>
+                        <p id="credibilityScore">-</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Warning Signs</h3>
+                        <p id="warningSigns">-</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tips-section">
+                <h2><i class="fas fa-lightbulb"></i> How to Spot Fake News</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Check the Source</h3>
+                        <p>Verify the credibility of the news source and author</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Cross-Reference</h3>
+                        <p>Look for the same story on other reliable news sites</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>Watch for Red Flags</h3>
+                        <p>Be cautious of sensational headlines and emotional triggers</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Check the Date</h3>
+                        <p>Ensure the news isn't outdated or taken out of context</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="examples-section">
+                <h2><i class="fas fa-vial"></i> Try Example Articles</h2>
+                <div class="example-buttons">
+                    <button class="example-btn" data-example="real">Real News Example</button>
+                    <button class="example-btn" data-example="fake">Fake News Example</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by advanced AI technology | <a href="#" id="aboutLink">About</a></p>
+        </footer>
+    </div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About Fake News Detector</h2>
+            <p>This tool uses advanced AI technology to analyze news articles and detect potential misinformation. It combines:</p>
+            <ul>
+                <li>Machine Learning Model trained on thousands of news articles</li>
+                <li>Pattern recognition for common fake news indicators</li>
+                <li>Credibility scoring based on multiple factors</li>
+            </ul>
+            <p>Remember: This tool is meant to assist in news verification, but always use your critical thinking skills.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
